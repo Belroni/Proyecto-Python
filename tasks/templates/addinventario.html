@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+
+{% block title %} 
+    add inventario
+{% endblock %}
+
+{{error}}
+
+{% block head %}
+<h1>Add Inventario</h1>
+{% endblock %}
+
+{% block content %}
+
+<form action="/inventario/addinventario" method="POST">
+    {% csrf_token %}
+    {{form}}
+    <button>Add</button>
+
+</form>
+
+{% endblock %}
